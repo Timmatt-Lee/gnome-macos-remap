@@ -35,7 +35,7 @@ Install [Git](https://github.com/git/git) and [AutoKey](https://github.com/autok
 ```
 mkdir -p ~/Downloads && cd ~/Downloads
 rm -rf ./gnome-macos-remap
-git clone https://github.com/petrstepanov/gnome-macos-remap
+git clone https://github.com/Timmatt-Lee/gnome-macos-remap
 cd gnome-macos-remap
 chmod +x ./install.sh ./uninstall.sh
 ./install.sh
