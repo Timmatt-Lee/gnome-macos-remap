@@ -39,13 +39,14 @@ then
   echo "Detected GNOME version $GNOME_VERSION_INT"
 fi
 
+
 # Apply dconf tweaks
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Primary>d']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Primary>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Primary><Shift>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Primary>grave']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Primary><Shift>grave']"
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Super>space']"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "[]"
 
 # Workspace switching hotkeys
@@ -74,7 +75,7 @@ else
 fi
 
 # Show applications view
-gsettings set org.gnome.shell.keybindings toggle-application-view "['LaunchB']"
+gsettings set org.gnome.shell.keybindings toggle-application-view "['<Control>space']"
 
 # Other stuff
 gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
