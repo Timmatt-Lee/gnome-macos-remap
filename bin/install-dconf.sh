@@ -68,9 +68,9 @@ gsettings set org.gnome.desktop.wm.keybindings minimize "['<Primary>m']"
 
 # Overview hotkey moved to "/org/gnome/shell/keybindings/" starting Gnome 41
 if (( GNOME_VERSION_INT >= 41 )); then
-  gsettings set org.gnome.shell.keybindings toggle-overview "['LaunchA']"
+  gsettings set org.gnome.shell.keybindings toggle-overview "['F3']"
 else
-  gsettings set org.gnome.shell.keybindings toggle-overview "['LaunchA']"
+  gsettings set org.gnome.shell.keybindings toggle-overview "['F3']"
   gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
 fi
 
