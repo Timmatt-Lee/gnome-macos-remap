@@ -15,23 +15,23 @@ else
 fi
 
 # Resolve overlapping key combinations
-echo 'Please select your "Command+Backspace" functionality.'
-PS3='Answer 1 or 2: '
-select opt in "Nautilus - Delete resource" "Text editing - Delete line"; do
-	case $opt in
-		"Nautilus - Delete resource")
-			rm ~/.config/autokey/data/gnome-macos-phrases/delete-line.py
-			rm ~/.config/autokey/data/gnome-macos-phrases/.delete-line.json
-			break
-			;;
-		"Text editing - Delete line")
+# echo 'Please select your "Command+Backspace" functionality.'
+# PS3='Answer 1 or 2: '
+# select opt in "Nautilus - Delete resource" "Text editing - Delete line"; do
+# 	case $opt in
+# 		"Nautilus - Delete resource")
+# 			rm ~/.config/autokey/data/gnome-macos-phrases/delete-line.py
+# 			rm ~/.config/autokey/data/gnome-macos-phrases/.delete-line.json
+# 			break
+# 			;;
+		# "Text editing - Delete line")
 			rm ~/.config/autokey/data/gnome-macos-phrases/nautilus-delete.txt
 			rm ~/.config/autokey/data/gnome-macos-phrases/nautilus-delete.json
-			break
-			;;
-		*) echo "invalid option $REPLY"
-		;;
-	esac
-done
+# 			break
+# 			;;
+# 		*) echo "invalid option $REPLY"
+# 		;;
+# 	esac
+# done
 
 

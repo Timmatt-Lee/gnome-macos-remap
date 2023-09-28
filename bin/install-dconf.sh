@@ -95,7 +95,7 @@ else
   gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot "['<Primary><Shift>percent']"
 fi
 
-gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "[]"
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Shift><Control>l']"
 
 # Setting relocatable schema
 gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/keybindings/ copy '<Primary>c'
