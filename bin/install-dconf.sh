@@ -41,7 +41,7 @@ fi
 
 
 # Apply dconf tweaks
-gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Primary>d']"
+gsettings set org.gnome.desktop.wm.keybindings show-desktop "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Primary>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Primary><Shift>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Primary>grave']"
@@ -78,6 +78,7 @@ fi
 gsettings set org.gnome.shell.keybindings toggle-application-view "['<Control>space']"
 
 # Other stuff
+gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
 gsettings set org.gnome.shell.keybindings toggle-message-tray "[]"
 
 gsettings set org.gnome.mutter.keybindings toggle-tiled-left "[]"
