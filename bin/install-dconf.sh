@@ -86,15 +86,15 @@ gsettings set org.gnome.mutter.keybindings toggle-tiled-right "[]"
 
 gsettings set org.gnome.mutter.wayland.keybindings restore-shortcuts "[]"
 
-if (( GNOME_VERSION_INT >= 42 )); then
-  gsettings set org.gnome.shell.keybindings screenshot "['<Primary><Shift>numbersign']"
-  gsettings set org.gnome.shell.keybindings show-screenshot-ui "['<Shift><Control>dollar']"
-  gsettings set org.gnome.shell.keybindings screenshot-window "['<Shift><Control>percent']"
-else
-  gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "['<Primary><Shift>numbersign']"
-  gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot "['<Primary><Shift>dollar']"
-  gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot "['<Primary><Shift>percent']"
-fi
+# if (( GNOME_VERSION_INT >= 42 )); then
+#   gsettings set org.gnome.shell.keybindings screenshot "['<Primary><Shift>numbersign']"
+#   gsettings set org.gnome.shell.keybindings show-screenshot-ui "['<Shift><Control>dollar']"
+#   gsettings set org.gnome.shell.keybindings screenshot-window "['<Shift><Control>percent']"
+# else
+#   gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot "['<Primary><Shift>numbersign']"
+#   gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot "['<Primary><Shift>dollar']"
+#   gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot "['<Primary><Shift>percent']"
+# fi
 
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver "['<Shift><Control>l']"
 
@@ -111,7 +111,12 @@ gsettings set org.gnome.Terminal.Legacy.Keybindings:/org/gnome/terminal/legacy/k
 gsettings set org.gnome.mutter overlay-key 'Super_R'
 
 # Custom 
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']"
+
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Snipit'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'snipit'
 gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding 'Pause'
+
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name 'Deepin Screenshot'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command 'deepin-screenshot'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding '<Shift><Ctrl>4'
